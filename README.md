@@ -1,7 +1,5 @@
 # Seelk Hacking Game
 
-## Seelk Recruitment project
-
 A simple cryptocurrency notification app.
 
 ### ✅  Required Features ✅
@@ -10,8 +8,8 @@ A simple cryptocurrency notification app.
 - [ ] Send Alerts by email
 
 ### ⭐️ Bonus features ⭐️
-- [ ] The better the UI, the happier the user
+- [x] The better the UI, the happier the user
 - [ ] Display the current price of the chosen cryptocurrency when creating an alert
-- [ ] State management (redux)
+- [x] State management (redux)
 - [ ] Display UI changes on alerts when condition is met
 - [ ] Percentage change: Be able to create an alert when the cryptocurrency increases by X% in a given timeframe
