@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+
+:root {
+  --primary-color: #9b30ff;
+  --bg-color: #121212;
+  --font-color: #FFFFFF;
+  --secondary-font-color: #777777;
+  --error-message: 'FF0000';
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: 'Oswald', Graphik, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+span {
+  color: var(--primary-color);
+}
+
+svg {
+  margin-right: 2rem;
+  fill: var(--primary-color);
+}
+
+p {
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  padding: 10px 22px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:active {
+  color: var(--secondary-font-color);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+
+input[type='email'] {
+  width: 100%;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  padding: 8px;
+  background-color: #303030;
+  color: var(--font-color);
+  font-size: 18px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.introContainer {
+  overflow: scroll;
+  background-color: #191919;
+  width: 70%;
+  left: 50%;
+  top: 15%;
+  bottom: 15%;
+  margin-left: -35%;
+  position: absolute;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 8px 6px -6px #000;
+  -moz-box-shadow: 0 8px 6px -6px #000;
+	box-shadow: 0 8px 6px -6px #000;
+}
+
+.introContainer > div {
+  position: relative;
+  height: 85%;
+  padding: 2rem;
+}
+
+.introContainer > div > p {
+  color: var(--secondary-font-color);
+}
+
+.introContainer > div > button {
+  position: absolute;
+  bottom: 0;
+  right: 3%;
+}
