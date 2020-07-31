@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Seelk-Hacking-Game/precache-manifest.06281d6fe54e3e3319f775d71d64ced2.js"
+  "/Seelk-Hacking-Game/precache-manifest.bc43060402b0d053ba940b39c500c3ee.js"
 );
 
 self.addEventListener('message', (event) => {
