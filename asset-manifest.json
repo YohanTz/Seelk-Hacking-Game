@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Seelk-Hacking-Game/static/css/main.0dc8e177.chunk.css",
+    "main.js": "/Seelk-Hacking-Game/static/js/main.40716a34.chunk.js",
+    "main.js.map": "/Seelk-Hacking-Game/static/js/main.40716a34.chunk.js.map",
+    "runtime-main.js": "/Seelk-Hacking-Game/static/js/runtime-main.9d86d77f.js",
+    "runtime-main.js.map": "/Seelk-Hacking-Game/static/js/runtime-main.9d86d77f.js.map",
+    "static/js/2.a1751c41.chunk.js": "/Seelk-Hacking-Game/static/js/2.a1751c41.chunk.js",
+    "static/js/2.a1751c41.chunk.js.map": "/Seelk-Hacking-Game/static/js/2.a1751c41.chunk.js.map",
+    "index.html": "/Seelk-Hacking-Game/index.html",
+    "precache-manifest.06281d6fe54e3e3319f775d71d64ced2.js": "/Seelk-Hacking-Game/precache-manifest.06281d6fe54e3e3319f775d71d64ced2.js",
+    "service-worker.js": "/Seelk-Hacking-Game/service-worker.js",
+    "static/css/main.0dc8e177.chunk.css.map": "/Seelk-Hacking-Game/static/css/main.0dc8e177.chunk.css.map",
+    "static/js/2.a1751c41.chunk.js.LICENSE.txt": "/Seelk-Hacking-Game/static/js/2.a1751c41.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d86d77f.js",
+    "static/js/2.a1751c41.chunk.js",
+    "static/css/main.0dc8e177.chunk.css",
+    "static/js/main.40716a34.chunk.js"
+  ]
+}
