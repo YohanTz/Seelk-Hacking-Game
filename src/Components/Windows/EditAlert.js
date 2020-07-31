@@ -9,8 +9,8 @@ const EditAlert = () => {
 
     return (
         <div className="windowContainer">
-            <div>
-                <h1>Edit your Alert n {alert.id}</h1>
+            <form>
+                <h1>Edit your Alert n°{alert.id}</h1>
                 <div>
                     <p>Choose your Cryptocurrency:</p>
                     <select value={alert.currency} onChange={elt => dispatch(changeCurrency(elt.target.value))}>
@@ -35,15 +35,16 @@ const EditAlert = () => {
                     </input> $
                 </div>
                 <button
+                    type="submit"
                     onClick={() => {
                         dispatch(editAlert(alert));
                         dispatch(resetCurrentAlert());
                         dispatch(removeWindow());
                     }}
                 >
-                    Create!
+                    Edit!
                 </button>
-            </div>
+            </form>
         </div>
     )
 }

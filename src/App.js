@@ -1,39 +1,27 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { updateCryptoInfos } from './Actions'
+import { useDispatch, useSelector } from 'react-redux';
 import Windows from './Components/Windows/Windows';
 import Header from './Components/Header';
-import AlertList from './Components/Alert';
-import coin from './API/coin';
-
+import Alert from './Components/Alert';
+import getCryptoData from './Scripts/getCryptoData';
 
 const App = () => {
+  const alerts = useSelector(state => state.alert);
+  const cryptos = useSelector(state => state.crypto);
   const dispatch = useDispatch();
 
-  const getCryptoData = async () => {
-    console.log('API Call!');
-    const response = await coin.get();
-    const cryptos = response.data.filter(elt => elt.type_is_crypto === 1 && elt.price_usd !== undefined);
-
-    cryptos.sort(function (a, b) {
-      if (a.asset_id < b.asset_id)
-        return -1;
-      if (a.asset_id > b.asset_id)
-        return 1;
-      return 0;
-    });
-    console.log(cryptos);
-    dispatch(updateCryptoInfos(cryptos));
-  }
-
   useEffect(() => {
-    getCryptoData().catch(error => console.log('Error: ', error));
+    getCryptoData(dispatch).catch(error => console.log('Error: ', error));
+        const interval = setInterval(() => {
+            getCryptoData(dispatch).catch(error => console.log('Error: ', error));
+        }, 60000);
+        return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="mainContainer">
       <Header />
-      <AlertList />
+      <Alert />
       <Windows />
     </div>
   );

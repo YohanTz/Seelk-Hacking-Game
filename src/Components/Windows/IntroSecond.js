@@ -9,7 +9,7 @@ const IntroSecond = () => {
 
     return (
         <div className="windowContainer">
-            <div>
+            <form>
                 <h1>Enter your email!</h1>
                 <p>We need your email to send you the crypto alerts!</p>
                 <MailInput />
@@ -17,15 +17,14 @@ const IntroSecond = () => {
                     ? null
                     : <p>Enter a valid email!</p> }
                 <button
-                    type="submit"
                     onClick={() => {
                         if (email.valid)
                             dispatch(removeWindow());
                     }}
-                >
+                >   
                     Start!
                 </button>
-            </div>
+            </form>
         </div>
     )
 }

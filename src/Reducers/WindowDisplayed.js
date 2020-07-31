@@ -2,8 +2,6 @@ let DEFAULT_STATE = {introFirst: true, introSecond: false, create: false, edit: 
 
 const windowReducer = (state = DEFAULT_STATE, action) => {
     switch (action.type) {
-        case 'INTRO_FIRST_WINDOW':
-            return DEFAULT_STATE;
         case 'INTRO_SECOND_WINDOW':
             return {introFirst: false, introSecond: true, create: false, edit: false};
         case 'CREATE_WINDOW':

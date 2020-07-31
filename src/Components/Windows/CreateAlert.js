@@ -14,7 +14,7 @@ const CreateAlert = () => {
                 <div>
                     <p>Choose your Cryptocurrency:</p>
                     <select onChange={elt => dispatch(changeCurrency(elt.target.value))}>
-                        { cryptoInfos.map((crypto, id) => (
+                        {cryptoInfos.map((crypto, id) => (
                             <option
                                 key={id}
                                 value={crypto.asset_id}
@@ -26,12 +26,12 @@ const CreateAlert = () => {
                     Current Price:
                     {
                         Math.round(cryptoInfos.find(crypto =>
-                        crypto.asset_id === alert.currency).price_usd * 1000) / 1000
+                            crypto.asset_id === alert.currency).price_usd * 1000) / 1000
                     } $
                 </div>
-                <p>Alert me when</p>
                 <div className="conditionContainer">
-                    {alert.currency} 
+                    <p>Alert me when</p>
+                    {alert.currency}
                     <select onChange={elt => dispatch(changeTrigger(elt.target.value))}>
                         <option value="<">Falls Under</option>
                         <option value=">">Is Above</option>
@@ -44,6 +44,7 @@ const CreateAlert = () => {
                     </input> $
                 </div>
                 <button
+                    type="submit"
                     onClick={() => {
                         dispatch(addAlert(alert));
                         dispatch(resetCurrentAlert());

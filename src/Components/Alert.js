@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { goCreateWindow } from '../Actions';
 import AlertTable from './AlertTable';
 
-const AlertList = () => {
+const Alert = () => {
     const currentWindow = useSelector(state => state.window)
     const dispatch = useDispatch();
 
@@ -21,4 +21,4 @@ const AlertList = () => {
     )
 }
 
-export default AlertList;
+export default Alert;

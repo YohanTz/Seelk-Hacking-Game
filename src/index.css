@@ -126,7 +126,8 @@ select:focus, select:hover {
 	box-shadow: 0 8px 6px -6px #000;
 }
 
-.windowContainer > div {
+.windowContainer > div,
+.windowContainer > form {
   position: relative;
   height: 85%;
   padding: 2rem;
@@ -136,13 +137,19 @@ select:focus, select:hover {
   color: var(--secondary-font-color);
 }
 
-.windowContainer > div > button {
+table {
+  overflow-x: auto;
+}
+
+.windowContainer > div > button,
+.windowContainer > form > button {
   position: absolute;
   bottom: 0;
   right: 3%;
 }
 
-.windowContainer > div > div {
+.windowContainer > div > div,
+.windowContainer > form > div {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -178,4 +185,8 @@ border-bottom: 1px solid var(--primary-color);
 
 .conditionContainer {
   flex-wrap: wrap;
+}
+
+.conditionContainer > p {
+  margin-right: 10px;
 }
