@@ -19,7 +19,7 @@ export const goCreateWindow = () => {
 
 export const goEditWindow = id => {
     return {
-        type: 'CREATE_WINDOW',
+        type: 'EDIT_WINDOW',
         payload: id
     }
 }
@@ -48,6 +48,13 @@ export const changeAmount = amount => {
     return {
         type: 'CHANGE_AMOUNT',
         payload: amount 
+    }
+}
+
+export const setCurrentAlert = (alert) => {
+    return {
+        type: 'SET',
+        payload: alert
     }
 }
 

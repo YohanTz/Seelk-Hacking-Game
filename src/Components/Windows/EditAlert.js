@@ -1,28 +1,29 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeWindow, changeCurrency, changeTrigger, changeAmount, addAlert, resetCurrentAlert } from '../../Actions';
+import { removeWindow, changeCurrency, changeTrigger, changeAmount, editAlert, resetCurrentAlert } from '../../Actions';
 
-const CreateAlert = () => {
-    const alert = useSelector(state => state.currentAlert);
+const EditAlert = ({ id }) => {
     const dispatch = useDispatch();
+    const alert = useSelector(state => state.currentAlert);
+
     return (
         <div className="windowContainer">
             <div>
-                <h1>Create a new Alert</h1>
+                <h1>Edit your Alert n {id}</h1>
                 <div>
                     <p>Choose your Cryptocurrency:</p>
-                    <select onChange={elt => dispatch(changeCurrency(elt.target.value))}>
+                    <select value={alert.currency} onChange={elt => dispatch(changeCurrency(elt.target.value))}>
                         <option value="BTC">BTC</option>
                         <option value="ETH">ETH</option>
                         <option value="ZCH">ZCH</option>
                         <option value="EOS">EOS</option>
                     </select>
-                    Current Price: TODO: 
+                    Current Price: TODO:
                 </div>
                 <p>Alert me when</p>
                 <div className="conditionContainer">
                     {alert.currency} 
-                    <select onChange={elt => dispatch(changeTrigger(elt.target.value))}>
+                    <select value={alert.trigger} onChange={elt => dispatch(changeTrigger(elt.target.value))}>
                         <option value="<">Falls Under</option>
                         <option value=">">Is Above</option>
                     </select>
@@ -35,7 +36,7 @@ const CreateAlert = () => {
                 </div>
                 <button
                     onClick={() => {
-                        dispatch(addAlert(alert));
+                        dispatch(editAlert(alert));
                         dispatch(resetCurrentAlert());
                         dispatch(removeWindow());
                     }}
@@ -47,4 +48,4 @@ const CreateAlert = () => {
     )
 }
 
-export default CreateAlert;
+export default EditAlert;

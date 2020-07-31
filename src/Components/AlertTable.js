@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteAlert } from '../Actions';
+import { deleteAlert, goEditWindow } from '../Actions';
 import Trash from './Icons/Trash';
+import Pencil from './Icons/Pencil';
 
 const AlertTable = () => {
     const alerts = useSelector(state => state.alert);
@@ -27,7 +28,8 @@ const AlertTable = () => {
                             <td>TODO:</td>
                             <td>{`${alert.trigger} ${alert.amount} $`}</td>
                             <td>
-                                <Trash onClick={() => dispatch(deleteAlert(alert.id))}></Trash> 
+                                <Trash onClick={() => dispatch(deleteAlert(alert.id))} />
+                                <Pencil onClick={() => dispatch(goEditWindow(alert.id))} />
                             </td>
                         </tr>
                     ))

@@ -3,7 +3,7 @@
 A simple cryptocurrency notification app.
 
 ### ✅  Required Features ✅
-- [ ] Front-end for the user to create / edit / delete alerts on currency price
+- [x] Front-end for the user to create / edit / delete alerts on currency price
 - [ ] Should be able to check every minute for the condition and send an email when it is met
 - [ ] Send Alerts by email
 

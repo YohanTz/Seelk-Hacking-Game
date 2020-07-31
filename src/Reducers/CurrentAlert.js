@@ -3,14 +3,19 @@ let DEFAULT_STATE = {currency: '', trigger: '<', amount: 0}
 const currentAlertReducer = (state = Object.assign({}, DEFAULT_STATE), action) => {
     switch (action.type) {
         case 'CHANGE_CURRENCY':
-            state.currency = action.payload;
-            return state;
+            return Object.assign({}, state, {
+                currency: action.payload
+            });
         case 'CHANGE_TRIGGER':
-            state.trigger = action.payload;
-            return state;
+            return Object.assign({}, state, {
+                trigger: action.payload
+            });
         case 'CHANGE_AMOUNT':
-            state.amount = action.payload;
-            return state;
+            return Object.assign({}, state, {
+                amount: action.payload
+            });
+        case 'SET':
+            return Object.assign({}, action.payload);
         case 'RESET':
             return Object.assign({}, DEFAULT_STATE);
         default:
