@@ -2,23 +2,23 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeWindow, changeCurrency, changeTrigger, changeAmount, editAlert, resetCurrentAlert } from '../../Actions';
 
-const EditAlert = ({ id }) => {
-    const dispatch = useDispatch();
+const EditAlert = () => {
     const alert = useSelector(state => state.currentAlert);
+    const cryptoInfos = useSelector(state => state.crypto);
+    const dispatch = useDispatch();
 
     return (
         <div className="windowContainer">
             <div>
-                <h1>Edit your Alert n {id}</h1>
+                <h1>Edit your Alert n {alert.id}</h1>
                 <div>
                     <p>Choose your Cryptocurrency:</p>
                     <select value={alert.currency} onChange={elt => dispatch(changeCurrency(elt.target.value))}>
-                        <option value="BTC">BTC</option>
-                        <option value="ETH">ETH</option>
-                        <option value="ZCH">ZCH</option>
-                        <option value="EOS">EOS</option>
+                        { cryptoInfos.map((crypto, id)=> (
+                            <option key={id} value={crypto.asset_id}>{crypto.asset_id}</option>
+                        ))}
                     </select>
-                    Current Price: TODO:
+                    Current Price: {Math.round(cryptoInfos.find(crypto => crypto.asset_id === alert.currency).price_usd * 1000) / 1000}
                 </div>
                 <p>Alert me when</p>
                 <div className="conditionContainer">

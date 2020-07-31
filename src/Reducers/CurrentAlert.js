@@ -1,4 +1,4 @@
-let DEFAULT_STATE = {currency: '', trigger: '<', amount: 0}
+let DEFAULT_STATE = {currency: '$BITC', trigger: '<', amount: 0}
 
 const currentAlertReducer = (state = Object.assign({}, DEFAULT_STATE), action) => {
     switch (action.type) {

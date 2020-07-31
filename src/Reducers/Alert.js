@@ -4,12 +4,16 @@ const alertReducer = (state = [], action) => {
             action.payload.id = state.length + 1;
             return [...state, Object.assign({}, action.payload)];
         case 'DELETE_ALERT':
-            return state.filter(alert => alert.id !== action.payload);
+            return state
+                .filter(alert => alert.id !== action.payload)
+                .map((alert, id) => Object.assign({}, alert, {
+                    id: id + 1
+                }));
         case 'EDIT_ALERT':
             return state.map(alert => {
                 return (alert.id === action.payload.id)
-                ? action.payload
-                : alert;
+                    ? action.payload
+                    : alert;
             });
         default:
             return state;

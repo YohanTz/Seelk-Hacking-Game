@@ -1,6 +1,6 @@
 export const setEmail = (mail) => {
     return {
-        type: 'SET',
+        type: 'SET_MAIL',
         payload: mail,
     }
 }
@@ -82,5 +82,12 @@ export const deleteAlert = id => {
     return {
         type: 'DELETE_ALERT',
         payload: id 
+    }
+}
+
+export const updateCryptoInfos = infos => {
+    return {
+        type: 'UPDATE_INFOS',
+        payload: infos
     }
 }

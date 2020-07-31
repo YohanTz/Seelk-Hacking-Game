@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400);
 
 :root {
-  --primary-color: #9b30ff;
+  --primary-color: #9b30ffE0;
   --bg-color: #121212;
   --font-color: #FFFFFF;
   --secondary-font-color: #777777;
@@ -155,7 +155,7 @@ select:focus, select:hover {
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 30px #000000;
-  margin-bottom: 10px;
+  margin: 40px 0 60px;
 }
 
 .alertTable > thead > tr {

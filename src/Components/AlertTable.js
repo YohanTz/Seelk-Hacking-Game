@@ -6,7 +6,9 @@ import Pencil from './Icons/Pencil';
 
 const AlertTable = () => {
     const alerts = useSelector(state => state.alert);
+    const cryptoInfos = useSelector(state => state.crypto);
     const dispatch = useDispatch();
+
     return (
         <table className="alertTable">
             <thead>
@@ -25,7 +27,8 @@ const AlertTable = () => {
                         <tr key={alert.id}>
                             <td>{alert.id}</td>
                             <td>{alert.currency}</td>
-                            <td>TODO:</td>
+                            <td>{Math.round(cryptoInfos
+                                .find(elt => elt.asset_id === alert.currency).price_usd * 1000) / 1000 + ' $'}</td>
                             <td>{`${alert.trigger} ${alert.amount} $`}</td>
                             <td>
                                 <Trash onClick={() => dispatch(deleteAlert(alert.id))} />

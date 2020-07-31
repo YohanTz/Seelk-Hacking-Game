@@ -4,7 +4,9 @@ import { removeWindow, changeCurrency, changeTrigger, changeAmount, addAlert, re
 
 const CreateAlert = () => {
     const alert = useSelector(state => state.currentAlert);
+    const cryptoInfos = useSelector(state => state.crypto);
     const dispatch = useDispatch();
+
     return (
         <div className="windowContainer">
             <div>
@@ -12,12 +14,20 @@ const CreateAlert = () => {
                 <div>
                     <p>Choose your Cryptocurrency:</p>
                     <select onChange={elt => dispatch(changeCurrency(elt.target.value))}>
-                        <option value="BTC">BTC</option>
-                        <option value="ETH">ETH</option>
-                        <option value="ZCH">ZCH</option>
-                        <option value="EOS">EOS</option>
+                        { cryptoInfos.map((crypto, id) => (
+                            <option
+                                key={id}
+                                value={crypto.asset_id}
+                            >
+                                {crypto.asset_id}
+                            </option>
+                        ))}
                     </select>
-                    Current Price: TODO: 
+                    Current Price:
+                    {
+                        Math.round(cryptoInfos.find(crypto =>
+                        crypto.asset_id === alert.currency).price_usd * 1000) / 1000
+                    } $
                 </div>
                 <p>Alert me when</p>
                 <div className="conditionContainer">

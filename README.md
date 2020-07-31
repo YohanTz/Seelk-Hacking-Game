@@ -9,7 +9,7 @@ A simple cryptocurrency notification app.
 
 ### ⭐️ Bonus features ⭐️
 - [x] The better the UI, the happier the user
-- [ ] Display the current price of the chosen cryptocurrency when creating an alert
+- [x] Display the current price of the chosen cryptocurrency when creating an alert
 - [x] State management (redux)
 - [ ] Display UI changes on alerts when condition is met
 - [ ] Percentage change: Be able to create an alert when the cryptocurrency increases by X% in a given timeframe
