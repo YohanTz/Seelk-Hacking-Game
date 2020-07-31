@@ -13,3 +13,6 @@ A simple cryptocurrency notification app.
 - [x] State management (redux)
 - [ ] Display UI changes on alerts when condition is met
 - [ ] Percentage change: Be able to create an alert when the cryptocurrency increases by X% in a given timeframe
+
+
+You can access it here: https://yohantz.github.io/Seelk-Hacking-Game
