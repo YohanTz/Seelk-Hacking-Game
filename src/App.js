@@ -1,14 +1,14 @@
 import React from 'react';
-import Intro from './Components/Intro';
+import Windows from './Components/Windows/Windows';
 import Header from './Components/Header';
-import AlertList from './Components/AlertList';
+import AlertList from './Components/Alert';
 
 const App = () => {
   return (
     <div className="mainContainer">
       <Header />
       <AlertList />
-      <Intro />
+      <Windows/>
     </div>
   );
 }
