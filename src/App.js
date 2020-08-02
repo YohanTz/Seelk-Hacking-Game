@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Windows from './Components/Windows/Windows';
 import Header from './Components/Header';
 import Alert from './Components/Alert';
 import getCryptoData from './Scripts/getCryptoData';
 
 const App = () => {
-  const alerts = useSelector(state => state.alert);
-  const cryptos = useSelector(state => state.crypto);
   const dispatch = useDispatch();
 
   useEffect(() => {

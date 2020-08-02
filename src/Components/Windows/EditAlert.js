@@ -7,6 +7,7 @@ const EditAlert = () => {
     const cryptoInfos = useSelector(state => state.crypto);
     const dispatch = useDispatch();
 
+
     return (
         <div className="windowContainer">
             <form>

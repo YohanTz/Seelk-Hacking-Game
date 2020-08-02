@@ -1,4 +1,4 @@
-let DEFAULT_STATE = {currency: '$BITC', trigger: '<', amount: 0}
+let DEFAULT_STATE = {currency: '', trigger: '<', amount: 0}
 
 const currentAlertReducer = (state = Object.assign({}, DEFAULT_STATE), action) => {
     switch (action.type) {
@@ -18,6 +18,10 @@ const currentAlertReducer = (state = Object.assign({}, DEFAULT_STATE), action) =
             return Object.assign({}, action.payload);
         case 'RESET':
             return Object.assign({}, DEFAULT_STATE);
+        case 'CHANGE_DEFAULT_CURRENCY':
+            DEFAULT_STATE.currency = action.payload;
+            return Object.assign({}, DEFAULT_STATE);
+            
         default:
             return state;
     }

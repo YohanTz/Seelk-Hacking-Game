@@ -6,10 +6,10 @@ const CreateAlert = () => {
     const alert = useSelector(state => state.currentAlert);
     const cryptoInfos = useSelector(state => state.crypto);
     const dispatch = useDispatch();
-
+    
     return (
         <div className="windowContainer">
-            <div>
+            <form>
                 <h1>Create a new Alert</h1>
                 <div>
                     <p>Choose your Cryptocurrency:</p>
@@ -25,7 +25,9 @@ const CreateAlert = () => {
                     </select>
                     Current Price:
                     {
-                        Math.round(cryptoInfos.find(crypto =>
+                        alert.currency === ''
+                        ? null
+                        : Math.round(cryptoInfos.find(crypto =>
                             crypto.asset_id === alert.currency).price_usd * 1000) / 1000
                     } $
                 </div>
@@ -53,7 +55,7 @@ const CreateAlert = () => {
                 >
                     Create!
                 </button>
-            </div>
+            </form>
         </div>
     )
 }

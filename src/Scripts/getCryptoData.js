@@ -1,4 +1,4 @@
-import { updateCryptoInfos } from '../Actions'
+import { updateCryptoInfos, changeDefaultCurrency } from '../Actions'
 import coin from '../API/coin';
 
 const getCryptoData = async (dispatch) => {
@@ -13,6 +13,8 @@ const getCryptoData = async (dispatch) => {
       return 0;
     });
     dispatch(updateCryptoInfos(cryptos));
+    dispatch(changeDefaultCurrency(cryptos[0].asset_id));
+    console.log(cryptos[0].asset_id);
   }
 
   export default getCryptoData;

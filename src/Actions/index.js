@@ -91,3 +91,10 @@ export const updateCryptoInfos = infos => {
         payload: infos
     }
 }
+
+export const changeDefaultCurrency = newDefaultCurrency => {
+    return {
+        type: 'CHANGE_DEFAULT_CURRENCY',
+        payload: newDefaultCurrency
+    }
+}
