@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e16582beaffe0112a595fed984ca1596",
+    "revision": "94784109abd4c606c8bf5007c4ff96bf",
     "url": "/Seelk-Hacking-Game/index.html"
   },
   {
-    "revision": "1d8b1e671a816e3903b3",
+    "revision": "70f1197afc753b36ab2a",
     "url": "/Seelk-Hacking-Game/static/css/main.ada68ad9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Seelk-Hacking-Game/static/js/2.32c0fb81.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1d8b1e671a816e3903b3",
-    "url": "/Seelk-Hacking-Game/static/js/main.f8f5cb9b.chunk.js"
+    "revision": "70f1197afc753b36ab2a",
+    "url": "/Seelk-Hacking-Game/static/js/main.3a2bd457.chunk.js"
   },
   {
     "revision": "e0554db61ba08c2752b3",
